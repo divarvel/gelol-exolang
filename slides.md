@@ -43,3 +43,103 @@ Raisonnement plus simple
 Meilleure composabilité
 
 Programmation parallèle
+
+## La programmation fonctionnelle
+
+### L'essence de la programmation fonctionnelle
+
+Des fonctions
+
+Leur composition
+
+### L'immutabilité
+
+Définition mathématique d'une variable
+
+Immutabilité
+
+### La transparence référentielle
+
+Remplacer une expression par la valeur qu'elle dénote
+
+Absence d'effets de bord
+
+### La récursion
+
+Fondamental
+
+Comment représenter une boucle sans la mutabilité ?
+
+Approche mathématique
+
+    x^0 = 1
+    x^n = x * x^(n-1)
+
+Insiste sur la décomposition du problème
+
+### La programmation fonctionnelle typée
+
+Chaque valeur a un type (Entier, Booléen, Liste d'entiers, Fonction des
+entiers vers les Booléens)
+
+Systèmes de types souvent sophistiqués
+
+#### Correspondance de Curry Howard
+
+Correspondance preuve - programme.
+
+    type <=> proposition
+    programme bien typé <=> preuve de la proposition
+
+Fondamental
+
+#### Un langage fonctionnel
+
+Permet la manipulation de fonctions
+
+Encourage l'immutabilité
+
+## Un langage fonctionnel, Haskell
+
+### Les caractéristiques de Haskell
+
+Haskell est un langage :
+
+    - Fonctionnel
+    - Statiquement typé
+    - "Fortement" typé
+    - À inférence de type
+    - Pur
+    - Paresseux
+
+### En détail :
+
+Typage statique : typage déterminé en amont
+
+Typage "fort" : à voir
+
+À inférence de type : capable de déterminer le type d'une variable
+
+Pur : pas d'effets de bord
+
+Paresseux : ne calcule un terme que quand (**et si**) il en a besoin
+
+### Les avantages
+
+Haskell est un langage :
+
+    - Fonctionnel : composablité
+    - Statiquement typé : sûreté
+    - "Fortement" typé : sûreté
+    - À inférence de type : concision
+    - Pur : composabilité
+    - Paresseux : composabilité
+
+
+### Un exemple
+
+La somme des *n* premiers nombres premiers
+
+    primes = 1 : nubBy gcd primes
+
+    sumOfPrimes n = sum . (take n primes)
