@@ -140,6 +140,6 @@ Haskell est un langage :
 
 La somme des *n* premiers nombres premiers
 
-    primes = 1 : nubBy gcd primes
+    primes = nubBy (\x y -> (gcd x y) > 1) [2..]
 
-    sumOfPrimes n = sum . (take n primes)
+    sumOfPrimes n = sum $ take n primes
