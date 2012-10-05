@@ -14,11 +14,11 @@ Pourquoi cette profusion ?
 
 ### Les différents paradigmes
 
-Impératif
+Quelques paradigmes :
 
-Fonctionnel
-
-Logique
+ - Impératif
+ - Fonctionnel
+ - Logique
 
 ### Le paradigme impératif
 
