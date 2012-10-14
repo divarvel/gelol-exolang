@@ -12,9 +12,9 @@ D'autres moins (J)
 
 Pourquoi cette profusion ?
 
-### Les différents paradigmes
+### Différents paradigmes
 
-Quelques paradigmes :
+Quelques paradigmes de programmation :
 
  - Impératif
  - Fonctionnel
