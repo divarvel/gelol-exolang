@@ -101,6 +101,18 @@ Permet la manipulation de fonctions
 
 Encourage l'immutabilité
 
+### Saines lectures
+
+Pour mieux comprendre pourquoi la FP est intéressante
+
+[FP for the rest of us](http://www.defmacro.org/ramblings/fp.html)
+[Why FP matters](http://www.cse.chalmers.se/~rjmh/Papers/whyfp.html)
+
+La référence
+
+[Structure and Interpretation of Computer Programs](http://mitpress.mit.edu/sicp/)
+
+
 ## Un langage fonctionnel, Haskell
 
 ### Les caractéristiques de Haskell
