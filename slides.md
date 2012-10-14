@@ -150,12 +150,36 @@ Paresseux : ne calcule un terme que quand (**et si**) il en a besoin
 
 Haskell est un langage :
 
-    - Fonctionnel : composablité
-    - Statiquement typé : sûreté
-    - "Fortement" typé : sûreté
-    - À inférence de type : concision
-    - Pur : composabilité
-    - Paresseux : composabilité
+- Fonctionnel : composablité
+- Statiquement typé : sûreté
+- "Fortement" typé : sûreté
+- À inférence de type : concision
+- Pur : composabilité
+- Paresseux : composabilité
+
+### Pourquoi apprendre Haskell ?
+
+- Pour le fun
+- Pour voir ce qu'est un beau langage
+- Pour les garanties qu'il apporte
+- Pour la rapidité de développement
+
+### Qui utilise Haskell ?
+
+- Moi
+    - Cette présentation a été générée par un programme en Haskell
+    - Elle est affichée dans un système de fenêtrage en Haskell
+
+- Des banques, en interne
+- Facebook
+- Des agences de développement
+
+### Quelques projets en Haskell
+
+- pandoc: conversion de documents
+- xmonad: gestionnaire de fenêtres
+- Darcs: gestionnaire de versions
+- Yesod: framework web
 
 
 ### Un exemple
