@@ -18,9 +18,9 @@ Pourquoi cette profusion ?
 
 Quelques paradigmes de programmation :
 
- - Impératif
- - Fonctionnel
- - Logique
+- Impératif
+- Fonctionnel
+- Logique
 
 ## Le paradigme impératif
 
@@ -107,10 +107,10 @@ Encourage l'immutabilité
 
 Pour mieux comprendre pourquoi la FP est intéressante
 
-[FP for the rest of us](http://www.defmacro.org/ramblings/fp.html)
-[Why FP matters](http://www.cse.chalmers.se/~rjmh/Papers/whyfp.html)
+- [FP for the rest of us](http://www.defmacro.org/ramblings/fp.html)
+- [Why FP matters](http://www.cse.chalmers.se/~rjmh/Papers/whyfp.html)
 
-La référence
+La référence :
 
 [Structure and Interpretation of Computer Programs](http://mitpress.mit.edu/sicp/)
 
@@ -138,15 +138,11 @@ Haskell est un langage :
 
 ## En détail :
 
-Typage statique : typage déterminé en amont
-
-Typage "fort" : à voir
-
-À inférence de type : capable de déterminer le type d'une variable
-
-Pur : pas d'effets de bord
-
-Paresseux : ne calcule un terme que quand (**et si**) il en a besoin
+- Typage statique : typage déterminé en amont
+- Typage "fort" : à voir
+- À inférence de type : capable de déterminer le type d'une variable
+- Pur : pas d'effets de bord
+- Paresseux : ne calcule un terme que quand (**et si**) il en a besoin
 
 ## Les avantages
 
@@ -208,8 +204,8 @@ La version courte
 
 Pour un algorithme récursif
 
- - Exprimer un cas d'arret
- - Exprimer un pas de réduction
+- Exprimer un cas d'arret
+- Exprimer un pas de réduction
 
 ## Quelques petits exercices
 
@@ -220,7 +216,7 @@ Pour un algorithme récursif
 
 ## Saines lectures
 
-[Learn You a Haskell](http://learnyouahaskell.com/)
-[Real World Haskell](http://book.realworldhaskell.org/)
+- [Learn You a Haskell](http://learnyouahaskell.com/)
+- [Real World Haskell](http://book.realworldhaskell.org/)
 
-`#haskell` sur freenode
+- `#haskell` sur freenode
