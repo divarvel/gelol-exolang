@@ -38,11 +38,11 @@ Proche des mathématiques
 
 ### Pourquoi le fonctionnel ?
 
-Raisonnement plus simple
-
-Meilleure composabilité
-
-Programmation parallèle
+- Raisonnement simplifié
+- Débogage aisé
+- Tests unitaires plus simples
+- Concurrence
+- Garanties fortes
 
 ## La programmation fonctionnelle
 
