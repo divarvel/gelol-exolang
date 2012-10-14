@@ -143,5 +143,30 @@ Haskell est un langage :
 La somme des *n* premiers nombres premiers
 
     primes = nubBy (\x y -> (gcd x y) > 1) [2..]
-
     sumOfPrimes n = sum $ take n primes
+
+La suite de Fibonacci
+
+    fibs = fix ((0:) . scanl (+) 1)
+    fibs' = 0 : 1 : zipWith (+) fibs' (tail fibs')
+
+### Exercice
+
+Calculer la somme d'une liste d'entiers.
+
+La version courte
+
+    sum = fold (+) 0
+
+### Comment aboutir à la solution
+
+Pour un algorithme récursif
+
+ - Exprimer un cas d'arret
+ - Exprimer un pas de réduction
+
+### Quelques petits exercices
+
+- Calculer la somme des entiers naturels multiples de 3 ou 5 inférieurs à 1000
+- Calculer l'inverse d'une liste
+- Le Fizz Buzz
