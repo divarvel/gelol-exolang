@@ -196,6 +196,63 @@ La suite de Fibonacci
     fibs = fix ((0:) . scanl (+) 1)
     fibs' = 0 : 1 : zipWith (+) fibs' (tail fibs')
 
+## La syntaxe Haskell
+
+Annotation de type (facultatif)
+
+    a :: String
+    f :: String -> String -> Boolean
+    (+) :: (Num a) => a -> a -> a
+
+## La syntaxe Haskell
+
+Déclaration de fonction
+
+    add2 a = a + 2
+
+    isTwo 2 = True
+    isTwo _ = False
+
+    headOr a [] = a
+    headOr _ (x:_) = x
+
+## La syntaxe Haskell
+
+Application de fonction
+
+    add2 4
+    isTwo (add2 0)
+    3 + 3
+
+Application partielle
+
+    (+3)
+    (==0)
+
+## La syntaxe Haskell
+
+Composition de fonction
+
+    isTwo (add2 0)
+    isTwo . add2 0
+
+## La syntaxe Haskell
+
+Déclaration de variable
+
+    let x = 0, y = 2 in 2 + 0
+
+Déclaration de fonction interne
+
+    foo x = bar (x + 2) where
+        bar y = y + 5
+
+## La syntaxe Haskell
+
+*List comprehension*
+
+    [ 2 * x | x <- [1..5]]
+
 ## Exercice
 
 Calculer la somme d'une liste d'entiers.
