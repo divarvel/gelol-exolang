@@ -1,8 +1,10 @@
-# Langages exotiques - Haskell
+% Programmation fonctionnelle / Haskell
+% Clément Delafargue
+% 15 octobre 2012
+
+# Introduction
 
 ## Introduction
-
-### Introduction
 
 Il existe beaucoup de langages de programmation
 
@@ -12,7 +14,7 @@ D'autres moins (J)
 
 Pourquoi cette profusion ?
 
-### Différents paradigmes
+## Différents paradigmes
 
 Quelques paradigmes de programmation :
 
@@ -20,7 +22,7 @@ Quelques paradigmes de programmation :
  - Fonctionnel
  - Logique
 
-### Le paradigme impératif
+## Le paradigme impératif
 
 Remonte à la machine de Turing
 
@@ -28,7 +30,7 @@ Manutention d'espace mémoire
 
 Proche du fonctionnment des processeurs
 
-### Le paradigme fonctionnel
+## Le paradigme fonctionnel
 
 Remonte au Lambda Calcul
 
@@ -36,7 +38,7 @@ Définition de fonctions et de leur combinaisons
 
 Proche des mathématiques
 
-### Pourquoi le fonctionnel ?
+## Pourquoi le fonctionnel ?
 
 - Raisonnement simplifié
 - Débogage aisé
@@ -44,21 +46,21 @@ Proche des mathématiques
 - Concurrence
 - Garanties fortes
 
-## La programmation fonctionnelle
+# La programmation fonctionnelle
 
-### L'essence de la programmation fonctionnelle
+## L'essence de la programmation fonctionnelle
 
 Des fonctions
 
 Leur composition
 
-### L'immutabilité
+## L'immutabilité
 
 Définition mathématique d'une variable
 
 Immutabilité
 
-### La "transparence référentielle"
+## La "transparence référentielle"
 
 Une expression dénote toujours la meme chose, indépendamment du contexte.
 
@@ -66,7 +68,7 @@ Terme pas toujours employé correctement.
 
 En réalité : "Absence d'effets de bord"
 
-### La récursion
+## La récursion
 
 Fondamental
 
@@ -79,14 +81,14 @@ Approche mathématique
 
 Insiste sur la décomposition du problème
 
-### La programmation fonctionnelle typée
+## La programmation fonctionnelle typée
 
 Chaque valeur a un type (Entier, Booléen, Liste d'entiers, Fonction des
 entiers vers les Booléens)
 
 Systèmes de types souvent sophistiqués
 
-### Correspondance de Curry Howard
+## Correspondance de Curry Howard
 
 Correspondance preuve - programme.
 
@@ -95,13 +97,13 @@ Correspondance preuve - programme.
 
 Fondamental
 
-### Un langage fonctionnel
+## Un langage fonctionnel
 
 Permet la manipulation de fonctions
 
 Encourage l'immutabilité
 
-### Saines lectures
+## Saines lectures
 
 Pour mieux comprendre pourquoi la FP est intéressante
 
@@ -113,16 +115,16 @@ La référence
 [Structure and Interpretation of Computer Programs](http://mitpress.mit.edu/sicp/)
 
 
-## Un langage fonctionnel, Haskell
+# Un langage fonctionnel, Haskell
 
-### Un langage fonctionnel, Haskell
+## Un langage fonctionnel, Haskell
 
 Haskell (nommé en hommage à Haskell Curry)
 
 Première version en 1990 (un an avant python)
 "Design by committee" (entre autres : Simon Peyton Jones, John Hughes, Philip Wadler)
 
-### Les caractéristiques de Haskell
+## Les caractéristiques de Haskell
 
 Haskell est un langage :
 
@@ -134,7 +136,7 @@ Haskell est un langage :
 - Paresseux
 - Utilisé dans la vraie vie (un peu)
 
-### En détail :
+## En détail :
 
 Typage statique : typage déterminé en amont
 
@@ -146,7 +148,7 @@ Pur : pas d'effets de bord
 
 Paresseux : ne calcule un terme que quand (**et si**) il en a besoin
 
-### Les avantages
+## Les avantages
 
 Haskell est un langage :
 
@@ -157,14 +159,14 @@ Haskell est un langage :
 - Pur : composabilité
 - Paresseux : composabilité
 
-### Pourquoi apprendre Haskell ?
+## Pourquoi apprendre Haskell ?
 
 - Pour le fun
 - Pour voir ce qu'est un beau langage
 - Pour les garanties qu'il apporte
 - Pour la rapidité de développement
 
-### Qui utilise Haskell ?
+## Qui utilise Haskell ?
 
 - Moi
     - Cette présentation a été générée par un programme en Haskell
@@ -174,7 +176,7 @@ Haskell est un langage :
 - Facebook
 - Des agences de développement
 
-### Quelques projets en Haskell
+## Quelques projets en Haskell
 
 - pandoc: conversion de documents
 - xmonad: gestionnaire de fenêtres
@@ -182,7 +184,7 @@ Haskell est un langage :
 - Yesod: framework web
 
 
-### Un exemple
+## Un exemple
 
 La somme des *n* premiers nombres premiers
 
@@ -194,7 +196,7 @@ La suite de Fibonacci
     fibs = fix ((0:) . scanl (+) 1)
     fibs' = 0 : 1 : zipWith (+) fibs' (tail fibs')
 
-### Exercice
+## Exercice
 
 Calculer la somme d'une liste d'entiers.
 
@@ -202,21 +204,21 @@ La version courte
 
     sum = fold (+) 0
 
-### Comment aboutir à la solution
+## Comment aboutir à la solution
 
 Pour un algorithme récursif
 
  - Exprimer un cas d'arret
  - Exprimer un pas de réduction
 
-### Quelques petits exercices
+## Quelques petits exercices
 
 - Calculer la somme des entiers naturels multiples de 3 ou 5 inférieurs à 1000
 - Calculer l'inverse d'une liste
 - Le Fizz Buzz
 
 
-### Saines lectures
+## Saines lectures
 
 [Learn You a Haskell](http://learnyouahaskell.com/)
 [Real World Haskell](http://book.realworldhaskell.org/)
