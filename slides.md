@@ -38,6 +38,10 @@ Définition de fonctions et de leur combinaisons
 
 Proche des mathématiques
 
+## Le paradigme fonctionnel
+
+Pas d'instructions, mais des données et leurs relations
+
 ## Pourquoi le fonctionnel ?
 
 - Raisonnement simplifié
@@ -180,7 +184,7 @@ Haskell est un langage :
 - Yesod: framework web
 
 
-## Un exemple
+## Quelques exemples
 
 La somme des *n* premiers nombres premiers
 
