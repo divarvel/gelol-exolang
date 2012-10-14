@@ -126,12 +126,13 @@ Première version en 1990 (un an avant python)
 
 Haskell est un langage :
 
-    - Fonctionnel
-    - Statiquement typé
-    - "Fortement" typé
-    - À inférence de type
-    - Pur
-    - Paresseux
+- Fonctionnel
+- Statiquement typé
+- "Fortement" typé
+- À inférence de type
+- Pur
+- Paresseux
+- Utilisé dans la vraie vie (un peu)
 
 ### En détail :
 
