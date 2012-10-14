@@ -86,7 +86,7 @@ entiers vers les Booléens)
 
 Systèmes de types souvent sophistiqués
 
-#### Correspondance de Curry Howard
+### Correspondance de Curry Howard
 
 Correspondance preuve - programme.
 
@@ -95,7 +95,7 @@ Correspondance preuve - programme.
 
 Fondamental
 
-#### Un langage fonctionnel
+### Un langage fonctionnel
 
 Permet la manipulation de fonctions
 
