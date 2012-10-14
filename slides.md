@@ -240,7 +240,7 @@ Composition de fonction
 
 Déclaration de variable
 
-    let x = 0, y = 2 in 2 + 0
+    let x = 0, y = 2 in x + y
 
 Déclaration de fonction interne
 
