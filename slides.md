@@ -58,11 +58,13 @@ Définition mathématique d'une variable
 
 Immutabilité
 
-### La transparence référentielle
+### La "transparence référentielle"
 
-Remplacer une expression par la valeur qu'elle dénote
+Une expression dénote toujours la meme chose, indépendamment du contexte.
 
-Absence d'effets de bord
+Terme pas toujours employé correctement.
+
+En réalité : "Absence d'effets de bord"
 
 ### La récursion
 
