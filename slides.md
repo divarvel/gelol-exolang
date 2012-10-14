@@ -115,6 +115,13 @@ La référence
 
 ## Un langage fonctionnel, Haskell
 
+### Un langage fonctionnel, Haskell
+
+Haskell (nommé en hommage à Haskell Curry)
+
+Première version en 1990 (un an avant python)
+"Design by committee" (entre autres : Simon Peyton Jones, John Hughes, Philip Wadler)
+
 ### Les caractéristiques de Haskell
 
 Haskell est un langage :
