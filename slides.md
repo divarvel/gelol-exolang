@@ -214,3 +214,11 @@ Pour un algorithme récursif
 - Calculer la somme des entiers naturels multiples de 3 ou 5 inférieurs à 1000
 - Calculer l'inverse d'une liste
 - Le Fizz Buzz
+
+
+### Saines lectures
+
+[Learn You a Haskell](http://learnyouahaskell.com/)
+[Real World Haskell](http://book.realworldhaskell.org/)
+
+`#haskell` sur freenode
