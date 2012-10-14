@@ -2,9 +2,9 @@
 % Clément Delafargue
 % 15 octobre 2012
 
-# Introduction
+# Contexte
 
-## Introduction
+## Une profusion de langages
 
 Il existe beaucoup de langages de programmation
 
