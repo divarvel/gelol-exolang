@@ -1,6 +1,6 @@
 % Programmation fonctionnelle / Haskell
 % Clément Delafargue
-% 15 octobre 2012
+% 18 octobre 2013
 
 # Contexte
 
@@ -10,9 +10,9 @@ Il existe beaucoup de langages de programmation
 
 Des célèbres (C, Java)
 
-D'autres moins (J)
+D'autres moins (J, Malbolge)
 
-Pourquoi cette profusion ?
+Pourquoi cette profusion ? Sont-ils équivalents ?
 
 ## Différents paradigmes
 
@@ -26,6 +26,7 @@ Quelques paradigmes de programmation :
 
 Remonte à la machine de Turing
 
+Exécution d'instructions
 Manutention d'espace mémoire
 
 Proche du fonctionnment des processeurs
@@ -36,7 +37,7 @@ Remonte au Lambda Calcul
 
 Définition de fonctions et de leur combinaisons
 
-Proche des mathématiques
+Plus proche des mathématiques
 
 ## Le paradigme fonctionnel
 
@@ -45,10 +46,11 @@ Pas d'instructions, mais des données et leurs relations
 ## Pourquoi le fonctionnel ?
 
 - Raisonnement simplifié
+- Garanties fortes
 - Débogage aisé
 - Tests unitaires plus simples
-- Concurrence
-- Garanties fortes
+- Optimisation plus poussée
+- Concurrence simplifiée
 
 # La programmation fonctionnelle
 
@@ -64,13 +66,22 @@ Définition mathématique d'une variable
 
 Immutabilité
 
-## La "transparence référentielle"
+## La pureté
 
-Une expression dénote toujours la meme chose, indépendamment du contexte.
+Une expression ``e`` est transparente référentiellement si pour tout programme
+``p``, chaque occurrence de ``e`` peut être remplacée par le résultat de
+l'évaluation de ``e`` **sans changer le résultat de l'évaluation de ``p``**
 
-Terme pas toujours employé correctement.
+L'expression ``2 + 2`` est transparente référentiellement.
 
-En réalité : "Absence d'effets de bord"
+L'expression ``readLine`` n'est pas transparente référentiellement.
+
+Une fonction ``f`` est **pure** si ``f(x)`` est référentiellement transparent
+(pour tout ``x`` référentiellement transparent).
+
+<http://blog.higher-order.com/blog/2012/09/13/what-purity-is-and-isnt/>
+
+**Permet le raisonnement par substitution**
 
 ## La récursion
 
@@ -83,14 +94,14 @@ Approche mathématique
     x^0 = 1
     x^n = x * x^(n-1)
 
-Insiste sur la décomposition du problème
+**Insiste sur la décomposition du problème**
 
 ## La programmation fonctionnelle typée
 
 Chaque valeur a un type (Entier, Booléen, Liste d'entiers, Fonction des
 entiers vers les Booléens)
 
-Systèmes de types souvent sophistiqués
+Systèmes de types souvent sophistiqués et très expressifs
 
 ## Correspondance de Curry Howard
 
@@ -101,11 +112,16 @@ Correspondance preuve - programme.
 
 Fondamental
 
-## Un langage fonctionnel
+## Les langages fonctionnels
 
-Permet la manipulation de fonctions
+Programmation fonctionnelle possible dans tous les langages.
 
-Encourage l'immutabilité
+Mais c'est plus ou moins facile.
+
+Un langage fonctionnel encourage un style fonctionnel :
+
+Limiter les effets de bord
+Favoriser l'immutabilité
 
 ## Saines lectures
 
@@ -113,6 +129,7 @@ Pour mieux comprendre pourquoi la FP est intéressante
 
 - [FP for the rest of us](http://www.defmacro.org/ramblings/fp.html)
 - [Why FP matters](http://www.cse.chalmers.se/~rjmh/Papers/whyfp.html)
+- [Out of the Tar Pit](http://shaffner.us/cs/papers/tarpit.pdf)
 
 La référence :
 
@@ -138,7 +155,7 @@ Haskell est un langage :
 - À inférence de type
 - Pur
 - Paresseux
-- Utilisé dans la vraie vie (un peu)
+- Utilisé dans la vraie vie
 
 ## En détail :
 
@@ -172,6 +189,10 @@ Haskell est un langage :
     - Cette présentation a été générée par un programme en Haskell
     - Elle est affichée dans un système de fenêtrage en Haskell
 
+- Clever Cloud
+    - Site institutionnel
+    - Documentation
+- Web2Day
 - Des banques, en interne
 - Facebook
 - Des agences de développement
@@ -181,33 +202,41 @@ Haskell est un langage :
 - pandoc: conversion de documents
 - xmonad: gestionnaire de fenêtres
 - Darcs: gestionnaire de versions
-- Yesod: framework web
+- snap: framework web
+- hakyll: CMS
 
 
 ## Quelques exemples
 
 La somme des *n* premiers nombres premiers
 
+```haskell
     primes = nubBy (\x y -> (gcd x y) > 1) [2..]
     sumOfPrimes n = sum $ take n primes
+```
 
 La suite de Fibonacci
 
+```haskell
     fibs = fix ((0:) . scanl (+) 1)
     fibs' = 0 : 1 : zipWith (+) fibs' (tail fibs')
+```
 
 ## La syntaxe Haskell
 
 Annotation de type (facultatif)
 
+```haskell
     a :: String
     f :: String -> String -> Boolean
     (+) :: (Num a) => a -> a -> a
+```
 
 ## La syntaxe Haskell
 
 Déclaration de fonction
 
+```haskell
     add2 a = a + 2
 
     isTwo 2 = True
@@ -215,43 +244,58 @@ Déclaration de fonction
 
     headOr a [] = a
     headOr _ (x:_) = x
+```
 
 ## La syntaxe Haskell
 
 Application de fonction
 
+```haskell
     add2 4
     isTwo (add2 0)
-    3 + 3
+    3 + 3 -- infix
+```
 
 Application partielle
 
-    (+3)
-    (==0)
+```haskell
+    add a b = a + b
+    addTen = add ten
+    addThree = (+3)
+    isZero = (==0)
+```
 
 ## La syntaxe Haskell
 
 Composition de fonction
 
+```haskell
     isTwo (add2 0)
-    isTwo . add2 0
+    (isTwo . add2) 0
+```
 
 ## La syntaxe Haskell
 
 Déclaration de variable
 
+```haskell
     let x = 0, y = 2 in x + y
+```
 
 Déclaration de fonction interne
 
+```haskell
     foo x = bar (x + 2) where
         bar y = y + 5
+```
 
 ## La syntaxe Haskell
 
 *List comprehension*
 
+```haskell
     [ 2 * x | x <- [1..5]]
+```
 
 ## Exercice
 
@@ -259,7 +303,9 @@ Calculer la somme d'une liste d'entiers.
 
 La version courte
 
+```haskell
     sum = fold (+) 0
+```
 
 ## Comment aboutir à la solution
 
